@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "12ebc6f3-44fd-4ee4-a2c9-868256b1f01b",
+		"name": "Java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/streets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"VuTongPhan2\",\n    \"founding\" : 1622736137051,\n    \"description\" : \"Em cung khong biet duong nay o dau\",\n    \"status\" : 1,\n    \"districtId\" : 1,\n    \"districtName\" : \"Thanh Xuan Bac\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/streets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"streets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/streets?streetName=Tien&districtName=Thanh Xuan Bac",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/streets?streetName=Tien&districtName=Thanh Xuan Bac",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"streets"
+					],
+					"query": [
+						{
+							"key": "streetName",
+							"value": "Tien"
+						},
+						{
+							"key": "districtName",
+							"value": "Thanh Xuan Bac"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/seed/generate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6ImtOcDBvZ3RQSmtMVFwvRXdSeTF0emZ3PT0iLCJ2YWx1ZSI6InpXdTBncHpUeDBNT1wvZ0U3Q0E0YUdIcGZBd29hcXBwSXlSVExtcEtlQmFPcFF1V2NKdVBWR3ozVVdwNnd6dklCVmpMaFRidlNEOHBuVVNvdzBrT2J5eE0xTG5CM3g1dExsdDZWKzJXSzMzbGNTWDlFb1pEeU5yckx0blIwN1BTUCIsIm1hYyI6IjA0ZWQwYTE5N2I4M2U3YWVlM2I5MTk3ZTQ3MjQ0MmE2NmVkNGJjMWUzOWRhNjZlMWEzZDA5OGU3MzUwNTliNWEifQ==",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"hello\",\n    \"wage\" : 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/seed/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"seed",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
